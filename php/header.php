@@ -81,7 +81,7 @@ session_start();
 					        </li>
 					        <?php if (isset($_SESSION['nombre_usuario'])) {?>
 					        <li class="nav-item">
-					            <a class="nav-link" aria-current="page" href="#">Carrito<img class="carro" src="../img/carrito.png" alt="Carrito de la compra"></a>
+					            <a class="nav-link" aria-current="page" href="http://localhost/Web2022/php/carrito.php">Carrito<img class="carro" src="../img/carrito.png" alt="Carrito de la compra"></a>
 					        </li>
 					    	<?php }?>
 				      	</ul>

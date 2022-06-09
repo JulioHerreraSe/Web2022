@@ -11,9 +11,11 @@
 	if($row['nombre'] != null){
 		$_SESSION['nombre_usuario']=$row['nombre'];
 		$_SESSION['carrito'] = [];
+
 		$_SESSION['cantidad'] = [];
 ?>
 	<script>
+		window.sessionStorage.setItem("carrito", JSON.stringify([]));
 		window.location.href='inicio.php';
 	</script>
 <?php

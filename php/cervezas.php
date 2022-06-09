@@ -41,7 +41,7 @@
          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3">
             <?php foreach ($query as $r): ?>
            <div class="col">
-             <div class="card shadow-sm" style="min-width: 366px; ">
+             <div class="card shadow-sm" >
                <img src="../img/<?php echo $r['imagen'];?>" style="margin: 0 auto;">
                <div class="card-body" style="margin: 0 auto; width: 100%;">
                  <p class="card-text"><?php echo $r['nombre'];?></p>
@@ -65,7 +65,15 @@ include("footer.php");
 <script type="text/javascript">
    function addCarrito(id)
    {
-      alert(id);
-      
+      var data = JSON.parse(sessionStorage.getItem("carrito"));//no brackets
+      data.push(id);
+      var i;
+      for (i = 0; i < data.length; i++) {
+          alert(data[i]);
    }
+
+      window.sessionStorage.setItem("carrito", JSON.stringify(data));
+   }
+
+
 </script>
