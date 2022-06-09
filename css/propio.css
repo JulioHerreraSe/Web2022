@@ -1,0 +1,62 @@
+body {
+      padding: 0;
+      margin: 0;
+}
+
+.logo {
+      width: auto;
+      max-height: 50px;
+      filter: invert(1);
+    }
+
+.carro {
+      filter: invert(1);
+      width: auto;
+      max-height: 20px;
+    }
+
+#login {
+      margin-top: 80px;
+      min-height: calc(100vh - 80px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+#inicio {
+      margin-top: 65px;
+}
+
+.form-signin .contain {
+      margin-top: 50px;
+      margin-bottom: 50px;
+}
+
+
+#formulario-login {
+      width: 90%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px !important;
+}
+
+#mapa {
+      max-width: 350px;
+}
+
+.link {
+      text-decoration: none;
+      color: lightblue;
+}
+
+#catas {
+      margin-top: 80px;
+      margin: min-height: calc(100vh - 80px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+#calendario {
+      margin: 40px !important;
+}
