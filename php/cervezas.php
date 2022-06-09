@@ -49,6 +49,12 @@
                    <small class="text-muted"><?php echo $r['descripcion'];?></small>
                    <small class="text-muted" style="font-weight: bold"><?php echo $r['precio'];?>€</small>
                  </div>
+                 <label for="cantidad" style="margin-top: 10px;">Cantidad</label>
+                 <select name="cantidad" id="cantidad<?php echo $r['id'];?>" class="form-control">
+                  <?php for ($i = 1; $i <= $r['cantidad']; $i++){?>
+                        <option  value="<?php echo $i; ?>" > <?php echo $i; ?> </option>
+                   <?php }?>
+                  </select>
                  <button type="submit" class="w-100 btn btn-lg btn-secondary" style=" margin-top: 10px;" onclick="addCarrito(<?php echo $r['id'];?>)">Añadir al carrito</button>
                </div>
              </div>
@@ -65,15 +71,13 @@ include("footer.php");
 <script type="text/javascript">
    function addCarrito(id)
    {
-      var data = JSON.parse(sessionStorage.getItem("carrito"));//no brackets
-      data.push(id);
-      var i;
-      for (i = 0; i < data.length; i++) {
-          alert(data[i]);
-   }
-
+      var data = JSON.parse(sessionStorage.getItem("carrito"));
+      var e = document.getElementById("cantidad"+id);
+      var cant = parseInt(e.options[e.selectedIndex].text);
+      for (var i = 0; i < cant; i++) {
+        data.push(id);
+      }
+      alert("Producto agregado al carrito")
       window.sessionStorage.setItem("carrito", JSON.stringify(data));
    }
-
-
 </script>
